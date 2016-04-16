@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Ant build file -->
+
+<project basedir="." default="create-zip" name="RTutorialModule">
+	<property name="dirOffset" value="../common_module_code" />
+	<import file="${dirOffset}/commontargets.xml" />
+
+	<target depends="init" name="create-zip">
+		<antcall target="prezip" />
+		<zip destfile="${dest.dir}/${ant.project.name}.zip" whenempty="fail" defaultexcludes="true">
+            <fileset dir="src" includes="*.R" />
+            <fileset dir="." includes="manifest, r.package.info, *.html, paramgroups.json, *.md" excludes="gpunit/**" />
+        </zip>
+		<antcall target="postzip" />
+	</target>
+
+</project>

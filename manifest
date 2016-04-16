@@ -1,0 +1,84 @@
+#Fri Apr 15 15:06:15 PDT 2016
+name=RTutorialModule
+# Declare a command line so GenePattern will execute the module script in an 
+# R-3.1 session with the input parameter values passed along as arguments to Rscript.
+# Note that there is no command line flag provided here for <increment.value> or
+# <extra.debug.message> as they are optional; see their parameter definitions below.
+# Just as a note on format, the trailing '\' character allows the command line to span multiple
+# lines of this file for readability and yet be treated as a single line by GenePattern.
+commandLine=<R3.1_Rscript> --no-save --quiet --slave --no-restore \
+     <libdir>run_gp_tutorial_module.R --libdir\=<libdir> \
+    --input.file\=<input.file> <increment.value> \
+    --print.debug.message\=<print.debug.message> <extra.debug.message> \
+    --output.file\=<output.file>
+license=
+taskDoc=doc.html
+fileFormat=gct
+taskType=Tutorial
+os=any
+quality=preproduction
+privacy=public
+description=A tutorial module for writing GenePattern modules in R.
+version=
+minGenePatternVersion=
+language=R3.1.3
+cpuType=any
+author=David Eby, Broad Institute
+
+p1_default_value=
+p1_description=A GCT file
+p1_fileFormat=gct
+p1_numValues=1
+p1_MODE=IN
+p1_name=input.file
+p1_optional=
+p1_prefix_when_specified=
+p1_TYPE=FILE
+p1_type=java.io.File
+p1_value=
+
+# Declare an optional numeric parameter.  Setting p2_optional=true is enough to 
+# make it optional, however we also set the 'p2_prefix_when_specified' value
+# so that (when specified) a parameter flag will be present on the command line
+# for the module code to detect.
+p2_default_value=
+p2_description=Increment the input matrix by this value.  If not specified, a value of 10 is used.
+p2_name=increment.value
+p2_optional=on
+p2_prefix_when_specified=--increment.value\=
+# Note that the type specified here is not actually used by GenePattern or the module.
+p2_type=java.lang.String
+p2_value=
+
+# Declare a boolean choice parameter.  We use "true" and "false" values here so that
+# R's 'as.logical' can pick up the value automatically.  
+p3_default_value=false
+p3_description=Print a debug message if true
+p3_name=print.debug.message
+p3_optional=
+p3_prefix_when_specified=
+p3_type=java.lang.String
+p3_value=true;false
+
+# Declare an optional string parameter, similar to <increment.value>
+p4_default_value=
+p4_description=An extra message to be printed if print.debug.message is true.  Empty messages are ignored.
+p4_name=extra.debug.message
+p4_optional=on
+p4_prefix_when_specified=--extra.debug.message\=
+p4_type=java.lang.String
+p4_value=
+
+p5_default_value=<input.file_basename>.incremented.gct
+p5_description=Output file name
+p5_name=output.file
+p5_optional=
+p5_prefix_when_specified=
+p5_type=java.lang.String
+p5_value=
+
+requiredPatchLSIDs=
+requiredPatchURLs=
+
+LSID=urn\:lsid\:broad.mit.edu\:cancer.software.genepattern.module.analysis\:00359\:999999999
+publicationDate=4/15/2016 15\:06 

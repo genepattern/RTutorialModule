@@ -1,0 +1,5 @@
+[{name: "Basic parameters", 
+  parameters: ["input.file", "increment.value", "output.file"]}, 
+ {name: "Advanced parameters", hidden: true, 
+  parameters: ["print.debug.message", "extra.debug.message"]}
+]
