@@ -53,11 +53,3 @@ Patching is very similar to the R-2.15.3 by-hand workaround instructions.  Hereâ
     curl -O ftp://gpftp.broadinstitute.org/plugin_support_files/R_Installer/3.1.3/R_3.1.3_mac_patch.tar.gz  # ... all that as one line
     cd /Library/Frameworks/R.framework/Versions
     sudo tar -xzvpf ~/Downloads/R_3.1.3_mac_patch.tar.gz
-
-## Configuring GenePattern for R
-As of v3.9.7, a fresh installation of GenePattern will automatically configure wrapper scripts set up to use the various versions of R relevant for our modules using the default paths for the CRAN executables (e.g. `/Library/Frameworks/R.framework/Versions/2.15/Resources/bin/Rscript` for R-2.15.3).  There should be no need for any additional configuration of GenePattern, so long as those versions of R are properly installed and patched.
-
-When upgrading to v3.9.7 from an older version of GenePattern, it is necessary to ...
-[document steps here.  Should be something like, "merge wrapper.props into custom.props, replacing any existing entries in the latter with those in the former"]
-
-Beyond that, this default configuration enables use of R\_Environment and R\_Profile files for the more recent versions of R (2.15.3 and newer), which have the standard meaning and behavior here as they do for R in general to specify default mirrors, proxy settings, etc.  As they are completely standard, their use will not be covered here.  See [R manual, Admin Guide, Env vars list ] for more details.

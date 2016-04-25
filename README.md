@@ -6,4 +6,8 @@ A new developer should have a look at the R code, the r.package.info file, and t
 
 The README\_PACKAGES.md guide contains detailed information for working with R packages within GenePattern beyond what is described in our [Programmers Guide](http://www.broadinstitute.org/cancer/software/genepattern/programmers-guide#Using_R_Packages).
 
-The README\_MAC.md guide contains detailed info for working with R in GenePattern on Mac OS X as there are special challenges for this platform.  A good deal of this information is in our [Administrator's Guide](http://www.broadinstitute.org/cancer/software/genepattern/administrators-guide) but is more up-to-date.  There is some repetition between the two guides but also not complete overlap; the intention is to eventually merge and rectify the two documents.  For now, it's important to at least have the info available in some form. 
+The README\_CRASH\_GUIDE.md contains some of my tips, tricks, and pitfalls for developing GenePattern modules in R.  Like the README\_PACKAGES.md guide, I considered these somewhat too detailed to include in the Programmers Guide.
+
+The README\_MAC.md guide contains detailed info for working with R in GenePattern on Mac OS X as there are special challenges for this platform.  A good deal of this information is in our [Administrators Guide](http://www.broadinstitute.org/cancer/software/genepattern/administrators-guide) but is more up-to-date.  There is some repetition between the two guides but also not complete overlap; the intention is to eventually merge and rectify the two documents.  For now, it's important to at least have the info available in some form. 
+
+The README\_CONFIG.md guide contains some information on configuring R for GenePattern.  Again, most if not all of this information will end up in the Administrators Guide eventually.
