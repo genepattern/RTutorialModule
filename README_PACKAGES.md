@@ -109,6 +109,7 @@ Now, fire up a new R session, setting this directory as your default library loc
 
 - **Always** use the final point update for that version of R.  That is, R-2.15.**3**, 3.0.**3**, 3.1.**3**.  We need to be consistent across environments to avoid dependency drift.
 - It's not necessary or even desirable to list CRAN versions at first, but these must be **locked down** to make the declaration final otherwise we'll have drift.
+- Practically speaking, you can use `biocLite()` only as it will call `install.packages()` for you behind the scenes to install CRAN packages when required.  If you're not sure which repository hosts a given module, you can tell by the URL used to download it.
 
 Transcribe this information into an r.package.info file, including the version and CRAN archive tag to pin those packages coming from CRAN.  On the off chance that the module uses a custom package not available from CRAN or Bioconductor, include the URLs for those bundles from wherever they are hosted.
 
